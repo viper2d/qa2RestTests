@@ -24,7 +24,7 @@ public class WeatherValidationData {
 
     public HashMap<String, Integer> getPressureRange() {
 
-        //Expanded expected "pressure" range, according to 3 year statistics.
+        //Expected "pressure" range, according to 3 year statistics (expanded).
 
         HashMap<String, Integer> pressureRange = new HashMap<>();
 
