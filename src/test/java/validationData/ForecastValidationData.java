@@ -4,7 +4,7 @@ import models.WeatherValidation;
 
 import java.util.HashMap;
 
-public class WeatherValidationData {
+public class ForecastValidationData {
 
     public WeatherValidation getWeatherValidationData(Integer id) {
 

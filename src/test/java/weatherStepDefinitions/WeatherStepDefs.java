@@ -10,7 +10,7 @@ import requesters.WeatherRequester;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import validationData.WeatherValidationData;
+import validationData.ForecastValidationData;
 
 import java.util.HashMap;
 
@@ -26,10 +26,10 @@ public class WeatherStepDefs {
     private Weather fetchedWeatherData;
     private Main fetchedMainData;
     private Integer fetchedCityId;
-    private WeatherValidationData weatherValidationData = new WeatherValidationData();
+    private ForecastValidationData forecastValidationData = new ForecastValidationData();
     private WeatherValidation validationData;
     private Scenario scenario;
-    final HashMap<String, Integer> pressureRange = weatherValidationData.getPressureRange();
+    final HashMap<String, Integer> pressureRange = forecastValidationData.getPressureRange();
 
     @Before
     public void before(Scenario scenario) {
@@ -70,7 +70,7 @@ public class WeatherStepDefs {
 
         scenario.write("Validating fetched \"weather\" data information, if in accordance with expected.");
 
-        validationData = weatherValidationData.getWeatherValidationData(fetchedCityId);
+        validationData = forecastValidationData.getWeatherValidationData(fetchedCityId);
 
         assertFalse("Weather group is empty!", weatherResponse.getWeather().isEmpty());
 
