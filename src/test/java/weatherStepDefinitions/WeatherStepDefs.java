@@ -68,7 +68,7 @@ public class WeatherStepDefs {
     @Then("validating fetched \"weather\" data")
     public void check_weather_data() {
 
-        scenario.write("Validating fetched \"weather\" data information, if is in accordance with expected.");
+        scenario.write("Validating fetched \"weather\" data information, if in accordance with expected.");
 
         validationData = weatherValidationData.getWeatherValidationData(fetchedCityId);
 
@@ -106,7 +106,7 @@ public class WeatherStepDefs {
     @Then("validating fetched pressure data")
     public void check_pressure_data() {
 
-        scenario.write("Validating fetched \"pressure\" data, if is not abnormal.");
+        scenario.write("Validating fetched \"pressure\" data, if not abnormal.");
 
         assertTrue("Pressure data is abnormal.",
                 fetchedMainData.getPressure() >= pressureRange.get("min") &&
